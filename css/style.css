@@ -267,12 +267,12 @@ p {
 }
 
 .profile, .skill, .works, .contact {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 @media (min-width: 376px) {
   .profile, .skill, .works, .contact {
-    margin-top: 150px;
+    margin-top: 10%;
   }
 }
 
@@ -580,10 +580,6 @@ p {
 .webworks {
   text-align: center;
   margin-bottom: 120px;
-  background-image: url(../images/works_bg.svg);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: contain;
 }
 
 .webworks__list {
@@ -592,9 +588,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
