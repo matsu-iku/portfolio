@@ -615,6 +615,7 @@ p {
 .footer {
     text-align: center;
     padding: 20px;
+    font-size: 10px;
     @include pc {
         padding: 40px;
     }
