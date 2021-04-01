@@ -466,6 +466,7 @@ p {
         display: flex;
         justify-content:space-between;
         flex-wrap: wrap;
+        align-items: center;
         list-style-type: none;
         @include pc {
             padding: 0;
