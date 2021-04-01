@@ -446,6 +446,11 @@ p {
     &__text {
         margin-bottom: 50px;
     }
+    &__small {
+        display: block;
+        text-align: center;
+        margin-left: 10px;
+    }
 }
 
 .webworks {
@@ -552,6 +557,9 @@ p {
         margin-bottom: 30px;
         font-weight: lighter;
         font-size: 28px;
+    }
+    &__small {
+        margin-left: 10px;
     }
     &__box {
         display: flex;
