@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*--- 共通設定 ----*/
-$pc: 375px;
+$pc: 376px;
 
 @mixin pc {
     @media(min-width: ($pc)) {
@@ -464,7 +464,7 @@ p {
         padding: 0 30px;
         list-style: none;
         display: flex;
-        justify-content:space-around;
+        justify-content:space-between;
         flex-wrap: wrap;
         list-style-type: none;
         @include pc {
@@ -522,10 +522,11 @@ p {
 }
 
 .paperworks {
+    margin: 0 auto;
     @include pc {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     &__title3 {
         margin-bottom: 10px;
