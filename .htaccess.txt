@@ -1,4 +1,4 @@
-AuthUserFile /portfolio/.htpasswd/
+AuthUserFile /home/portfolio/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
