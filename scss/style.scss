@@ -300,6 +300,8 @@ p {
         margin: 0 auto;
         @include pc {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     }
     &__box {
@@ -329,6 +331,11 @@ p {
         font-weight: 400;
         @include pc {
             margin-top: 140px;
+        }
+    }
+    &__text {
+        @include pc {
+            max-width: 240px;
         }
     }
 
