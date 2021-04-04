@@ -1,8 +1,9 @@
-AuthUserFile .htpasswd
+AuthUserFile /portfolio/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
 require valid-user
+<Files index.html>
 <Files ~ "^.(htpasswd|htaccess)$">
 deny from all
 </Files>
