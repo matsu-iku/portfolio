@@ -820,5 +820,35 @@ p {
           transform: translate(0, 0);
 }
 
+/* topへ戻る */
+.top__link {
+  display: none;
+}
+
+@media (min-width: 376px) {
+  .top__link {
+    display: inline-block;
+    max-width: 40px;
+  }
+}
+
+@media (min-width: 376px) {
+  .top__link.openTop {
+    display: inline-block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 40px;
+    bottom: 70px;
+    z-index: 500;
+  }
+}
+
 /*--- 共通設定 ----*/
 /*# sourceMappingURL=style.css.map */

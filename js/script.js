@@ -33,3 +33,27 @@ $(function(){
         });
     });
 });
+
+
+//ページトップボタン
+window.onscroll = function(event) {
+    //スクロール値の取得
+    let position = document.documentElement.scrollTop || document.body.scrollTop;
+
+    //console.log(position);
+
+
+    /*
+    positionの値が300以上なら
+        #page-top に .openTop を追加
+    それ以外なら
+        #page-top から .openTop を削除
+    */
+    const pageTop = document.getElementById('page-top');
+
+    if(position >= 600) {
+        pageTop.classList.add('openTop');
+    } else {
+        pageTop.classList.remove('openTop');
+    }
+};

@@ -634,5 +634,27 @@ p {
     transform : translate(0, 0);
 }
 
+/* topへ戻る */
+.top__link {
+    display: none;
+    @include pc {
+        display: inline-block;
+        max-width: 40px;
+    }
+}
+
+.top__link.openTop {
+    @include pc {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        right: 40px;
+        bottom: 70px;
+        z-index: 500;
+    }
+}
 
 @import "_works";
