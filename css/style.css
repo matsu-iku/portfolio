@@ -727,10 +727,6 @@ p {
   font-size: 28px;
 }
 
-.contact__small {
-  margin-left: 10px;
-}
-
 .contact__box {
   display: -webkit-box;
   display: -ms-flexbox;
