@@ -18,3 +18,18 @@ gNav.onclick = (e) => {
     document.getElementById('gnavi').classList.remove('open');
     document.getElementById('menu-btn').classList.remove('close');
 };
+
+
+// フェードイン
+$(function(){
+    $(window).scroll(function (){
+        $('.fadein').each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 200){
+                $(this).addClass('scrollin');
+            }
+        });
+    });
+});
