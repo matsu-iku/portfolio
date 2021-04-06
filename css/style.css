@@ -828,7 +828,7 @@ p {
 @media (min-width: 376px) {
   .top__link {
     display: inline-block;
-    max-width: 40px;
+    max-width: 25px;
   }
 }
 
@@ -845,9 +845,22 @@ p {
     height: 80px;
     position: fixed;
     right: 40px;
-    bottom: 70px;
+    bottom: 30px;
     z-index: 500;
   }
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#49dad3), color-stop(#3cd8e0), color-stop(#3ad5ec), color-stop(#46d2f6), color-stop(#59cefc), color-stop(#6ec9ff), color-stop(#85c4ff), to(#9abeff));
+  background: linear-gradient(90deg, #49dad3, #3cd8e0, #3ad5ec, #46d2f6, #59cefc, #6ec9ff, #85c4ff, #9abeff);
+  text-align: center;
+  color: #fff;
 }
 
 /*--- 共通設定 ----*/
