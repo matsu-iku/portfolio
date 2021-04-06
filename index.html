@@ -14,7 +14,9 @@
 	<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="MATSUMOTO IKUKOのポートフォリオ　トップページ">
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 
 <body>
@@ -234,7 +236,45 @@
 		<h2 class="contact__title2">Contact</h2>
 		<small class="contact__small">※改修中につき、ご連絡はメールまでお願いいたします※</small>
 		<div class="contact__box wrap">
-			<form class="form">
+			<!-- class, action, methodを変更しないでください -->
+			<form class="formrun" action="https://form.run/api/v1/r/im909dhyfj4mz5x6r2l4axtq" method="post">
+				<!-- ↓自由に要素を追加・編集することができます -->
+				<div class="form">
+					<label class="form__text">お名前<small> 必須</small></label>
+					<input name="お名前" type="text" class="form__input">
+				</div>
+
+				<div class="form">
+					<label class="form__text">メールアドレス<small> 必須</small></label>
+					<input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required class="form__input">
+					<div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+				</div>
+
+				<div class="form">
+					<label class="form__text">お問い合わせ<small> 必須</small></label>
+					<textarea name="お問い合わせ" data-formrun-required class="form__textarea"></textarea>
+					<div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+				</div>
+
+				<!-- ボット投稿をブロックするためのタグ -->
+				<div class="_formrun_gotcha">
+					<style media="screen">
+						._formrun_gotcha {
+							position: absolute !important;
+							height: 1px;
+							width: 1px;
+							overflow: hidden;
+						}
+					</style>
+					<label for="_formrun_gotcha">If you are a human, ignore this field</label>
+					<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+				</div>
+
+				<button type="submit" data-formrun-error-text="未入力の項目があります"
+					data-formrun-submitting-text="送信中..." class="contact__button">送信</button>
+			</form>
+
+			<!-- <form class="form">
 				<p class="form__text">お名前<small>（必須）</small></p>
 				<input type="text" class="form__input">
 			</form>
@@ -246,7 +286,7 @@
 				<p class="form__text">お問い合わせ内容<small>（必須）</small></p>
 				<textarea name="" id="" class="form__textarea"></textarea>
 			</form>
-			<button type="submit" class="contact__button">submit</button>
+			<button type="submit" class="contact__button">submit</button> -->
 		</div>
 	</section>
 
