@@ -138,18 +138,36 @@ p {
   display: block;
   text-decoration: none;
   color: #333;
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+  /*hoverの設定*/
 }
 
-@media (min-width: 376px) {
-  .gnavi__link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-  }
+.gnavi__link:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  /*X方向にスケール拡大*/
 }
 
-@media (min-width: 376px) {
-  .gnavi__link:hover {
-    border-bottom: 1px solid #333;
-  }
+.gnavi__link::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  /*線の形状*/
+  width: 100%;
+  height: 1px;
+  background: #333;
+  /*アニメーションの指定*/
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  /*左上基点*/
 }
 
 /* ハンバーガー ここから*/
@@ -857,8 +875,7 @@ p {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#49dad3), color-stop(#3cd8e0), color-stop(#3ad5ec), color-stop(#46d2f6), color-stop(#59cefc), color-stop(#6ec9ff), color-stop(#85c4ff), to(#9abeff));
-  background: linear-gradient(90deg, #49dad3, #3cd8e0, #3ad5ec, #46d2f6, #59cefc, #6ec9ff, #85c4ff, #9abeff);
+  background: linear-gradient(45deg, #49dad3, #3cd8e0, #3ad5ec, #46d2f6, #59cefc, #6ec9ff, #85c4ff, #9abeff);
   text-align: center;
   color: #fff;
 }

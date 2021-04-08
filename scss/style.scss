@@ -116,14 +116,29 @@ p {
         display: block;
         text-decoration: none;
         color: #333;
-        @include pc {
-            border-bottom: 1px solid rgba(255, 255, 255, 0);
-        }
+        /*線の基点とするためrelativeを指定*/
+        position: relative;
 
+        /*hoverの設定*/
         &:hover {
-            @include pc {
-                border-bottom: 1px solid #333;
+            &::after {
+                transform: scale(1, 1);/*X方向にスケール拡大*/
             }
+        }
+        &::after {
+            content: '';
+            /*絶対配置で線の位置を決める*/
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            /*線の形状*/
+            width: 100%;
+            height: 1px;
+            background:#333;
+            /*アニメーションの指定*/
+            transition: all .3s;
+            transform: scale(0, 1);/*X方向0、Y方向1*/
+            transform-origin: left top;/*左上基点*/
         }
     }
 }
@@ -664,7 +679,7 @@ p {
       z-index: 999;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, #49dad3, #3cd8e0, #3ad5ec, #46d2f6, #59cefc, #6ec9ff, #85c4ff, #9abeff);
+      background: linear-gradient(45deg, #49dad3, #3cd8e0, #3ad5ec, #46d2f6, #59cefc, #6ec9ff, #85c4ff, #9abeff);
       text-align:center;
       color:#fff;
   }
