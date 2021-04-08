@@ -169,6 +169,10 @@ header li+li {
     margin-left: 40px;
 }
 
+.news dd {
+    text-align: left;
+}
+
 .news dd:nth-child(3) {
     margin-left: auto;
 }
@@ -226,13 +230,14 @@ footer {
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 8vw;
     }
 
 /* header */
     header {
-        min-height: 586px;
         margin: 0 auto;
+        min-height: 80vh;
+        background-position: center bottom;
     }
 
     .header__img {
@@ -257,7 +262,7 @@ footer {
     }
 
     header li+li {
-        border-left: 2px solid #000;
+        border-left: 1px solid #000;
     }
 
     .sp {
@@ -274,11 +279,11 @@ footer {
     }
 
     section {
-        padding: 75px 0;
+        padding: 10% 0;
     }
 
     .about p {
-        font-size: 20px;
+        font-size: 4vw;
     }
 
     /* .shop */
@@ -311,6 +316,10 @@ footer {
     /* .news */
     .news__content {
         margin: 0;
+    }
+
+    .news__line {
+        display: none;
     }
 
     /* .bottom_nav */
