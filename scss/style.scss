@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*--- 共通設定 ----*/
-$pc: 376px;
+$pc: 429px;
 
 @mixin pc {
     @media(min-width: ($pc)) {
@@ -210,6 +210,10 @@ p {
 /* .hero */
 .hero {
     position: relative;
+    background-image: url(../images/hero_sp_left.png), url(../images/hero_sp_right.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+
     @include pc {
         background-image: url(../images/hero_bg.png);
         background-position: right center;
@@ -241,6 +245,7 @@ p {
             max-width: 80vw;
         }
         &--sp {
+            visibility: hidden;
             @include pc {
                 display: none;
             }
@@ -408,6 +413,11 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(../images/skill_bg.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 30px;
     &__title2 {
     }
 }
