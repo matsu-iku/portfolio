@@ -1,4 +1,4 @@
-AuthUserFile /home/https://matsu-iku.github.io/portfolio/.htpasswd
+AuthUserFile /https://github.com/matsu-iku/portfolio/blob/900a7d1166146a112247d33b6fcc2799d2d2de09/.htaccess
 AuthGroupFile /dev/null
 AuthName "Input ID and Password."
 AuthType Basic
