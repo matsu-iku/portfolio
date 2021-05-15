@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*--- 共通設定 ----*/
-$pc: 429px;
+$pc: 728px;
 
 @mixin pc {
     @media(min-width: ($pc)) {
@@ -215,10 +215,11 @@ p {
     background-repeat: no-repeat;
 
     @include pc {
-        background-image: url(../images/hero_bg.png);
-        background-position: right center;
-        background-size: contain;
-        max-height: 100vh;
+        background-image: none;
+        // background-image: url(../images/hero_bg.png);
+        // background-position: right center;
+        // background-size: contain;
+        // max-height: 100vh;
     }
     &__title1 {
         font-family: 'Source Code Pro', monospace;
@@ -234,6 +235,7 @@ p {
         left: 50%;
         transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
         @include pc {
+            position: absolute;
             left: 35%;
             font-size: 5vw;
         }
@@ -243,6 +245,18 @@ p {
         @include pc {
             display: inline-block;
             max-width: 80vw;
+            z-index: 40;
+        }
+        &--bg {
+            display: none;
+            @include pc {
+                display: inline-block;
+                position: absolute;
+                z-index: 60;
+                max-width: 33vw;
+                right: 0;
+                top: 0;
+            }
         }
         &--sp {
             visibility: hidden;
@@ -315,7 +329,7 @@ p {
     @include pc {
         background-image: url(../images/favorite_bg-pc.svg);
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right bottom;
         background-size: contain;
         padding-bottom: 30px;
     }
@@ -332,9 +346,9 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url(../images/favorite_bg.png);
+        background-image: url(../images/favorite_bg.svg);
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: right bottom;
         background-size: contain;
         padding: 0 60px 15px;
         @include pc {
@@ -413,13 +427,14 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/skill_bg.png);
+    background-image: url(../images/skill_bg_sp.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    padding-bottom: 30px;
-    &__title2 {
+    @include pc {
+        background-image: url(../images/skill_bg.png);
     }
+    padding-bottom: 30px;
 }
 
 .skillbox {
@@ -476,9 +491,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../images/works_bg.svg);
+    background-image: url(../images/works_bg_sp.svg);
     background-repeat: no-repeat;
-    background-position: left bottom;
+    background-position: right bottom;
+    @include pc {
+        background-image: url(../images/works_bg.svg);
+    }
     &__text {
         margin-bottom: 50px;
     }
@@ -546,9 +564,14 @@ p {
         text-decoration: none;
     }
     &__title3 {
+        font-family: 'Source Code Pro', monospace;
         margin-bottom: 10px;
         font-weight: 400;
         font-size: 20px;
+    }
+    &__small {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
     }
 }
 
@@ -581,10 +604,14 @@ p {
 
 .contact {
     text-align: center;
-    background-image: url(../images/concept1.svg), url(../images/concept2.svg);
+    background-image: url(../images/contact_bg_bottom.svg);
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-position: left bottom, right bottom;
-    background-size: 50%, 50%;
+    background-size: cover;
+    // background-image: url(../images/concept1.svg), url(../images/concept2.svg);
+    // background-repeat: no-repeat;
+    // background-position: left bottom, right bottom;
+    // background-size: 50%, 50%;
     &__title2 {
         margin-bottom: 30px;
         font-weight: lighter;
@@ -602,7 +629,7 @@ p {
     &__button {
         display: block;
         padding: 1em;
-        margin: 0 auto 140px;
+        margin: 0 auto 80px;
         width: 175px;
         font-size: 14px;
         color: #fff;
@@ -633,6 +660,7 @@ p {
         border-radius: 7px;
         padding: 8px;
         height: 200px;
+        margin-bottom: 80px;
     }
 }
 .form small {
